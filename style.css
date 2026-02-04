@@ -1,0 +1,460 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.brand-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #000 !important;
+}
+
+/* Active link */
+.navbar-nav .nav-link.active {
+  color: #CF0F0F !important;
+}
+/* Base nav link */
+.navbar-nav .nav-link {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000 !important;
+  padding-bottom: 6px;
+}
+
+/* Red outline effect */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-bottom: 2px solid #CF0F0F;
+  transition: width 0.3s ease;
+}
+
+/* On hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Keep active highlighted
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+} */
+
+/* Mobile spacing */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 8px 0;
+  }
+}
+/* Make images responsive & consistent height */
+.carousel-img {
+  height: 100vh;
+  object-fit: cover;
+  object-position: center top;
+}
+
+
+/* Caption styling */
+.carousel-caption {
+  bottom: 20%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 60vh;
+  }
+
+  .carousel-caption {
+    bottom: 10%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+/* Title (col-12) */
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #4d4949;
+}
+
+/* Highlight text (col-4) */
+.about-highlight {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #CF0F0F; /* deep red */
+}
+
+/* Main content (col-8) */
+.about-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #111;
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .about-highlight {
+    margin-bottom: 1rem;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+}
+.read-more-btn {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  color: #CF0F0F !important;
+  border: 2px solid #CF0F0F !important;
+  border-radius: 50px!important;
+  padding: 10px 28px!important;
+  text-decoration: none !important;
+  transition: all 0.3s ease!important;
+  background-color: transparent !important;
+}
+
+/* Hover effect */
+.read-more-btn:hover {
+  background-color: #CF0F0F !important;
+  color: #fff !important;
+}
+
+/* Card Stack */
+/* Swiper size */
+.cardSwiper {
+  width: 320px;
+  height: 380px;
+}
+
+/* Individual cards */
+.cardSwiper .swiper-slide {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+.cardSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile scaling */
+@media (max-width: 768px) {
+  .cardSwiper {
+    width: 260px;
+    height: 320px;
+  }
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;     
+}
+.about-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 650px;
+}
+
+/* dark overlay */
+.about-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.about-image-text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+/* Animation initial state */
+.animate-text {
+  opacity: 0;
+  transform: translate(-40px, -50%);
+  animation: slideFadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Keyframes */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .about-image-text {
+    font-size: 2.2rem;
+    left: 4%;
+  }
+}
+
+/* ABOUT PAGE */
+.about-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+.about-text1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #111;
+  line-height: 1.8;
+  text-align: justify; /* ✅ justify text */
+}
+
+/* Bold intro text */
+.about-text1 b {
+  color: #b11226;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Space between text and image columns */
+
+.about-card-wrapper {
+  position: relative;
+  max-width: 450px;
+}
+
+/* Red card background */
+.about-card-bg {
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  background-color: #CF0F0F; /* deep red */
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Image on top */
+.about-card-img {
+  position: relative;
+  z-index: 2;
+  border-radius: 12px;
+  transform: translateX(25px); /* 👈 shift image right */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.about-card-wrapper:hover .about-card-img {
+  transform: translateX(25px) translateY(-5px);
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .about-card-wrapper {
+    margin: 0 auto;
+  }
+
+  .about-card-img {
+    transform: translateX(15px);
+  }
+}
+/* Our Mission and vision */
+/* Red background section */
+.mission-vision-section {
+  background-color: #CF0F0F; /* deep red */
+}
+
+/* Card style */
+.mv-card {
+  background: #ffffff;
+  padding: 3rem 2rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+.mv-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image on top */
+.mv-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+.about-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* Text */
+.mv-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/*Board Directors */
+.director-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.director-card:hover {
+  transform: translateY(-6px);
+}
+
+.director-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.director-card h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.director-card span {
+  font-size: 0.9rem;
+  color: #CF0F0F;
+  font-weight: 600;
+}
+/* MAP */
+.locate-section {
+  background-color: #faf0eb; /* deep ash */
+  overflow-x: hidden; /* IMPORTANT */
+  color: #CF0F0F;
+}
+
+/* Map wrapper */
+.map-half {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+/* Google map iframe */
+.map-half iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block; 
+}
+
+/* Text side */
+.locate-text {
+  padding: 40px;
+  box-sizing: border-box; /* VERY IMPORTANT */
+}
+
+.locate-text p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .map-half {
+    min-height: 300px;
+  }
+
+  .locate-text {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/*Manufacturing Section*/
+.manufacturing-section {
+  background-color: CF0F0F;
+}
+
+.facility-subtext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.facility-img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Fade feels premium */
+.carousel-fade .carousel-item {
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .facility-img {
+    height: 260px;
+  }
+}
+
+
+
+
+
