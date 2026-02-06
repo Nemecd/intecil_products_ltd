@@ -46,6 +46,19 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-content">
+
+    <!-- Logo -->
+    <img src="img/logo.png" alt="Intecil Logo" class="preloader-logo">
+
+    <!-- Spinner -->
+    <div class="preloader-spinner"></div>
+
+  </div>
+</div>
+
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-light"
       style="background-color: white"
@@ -326,7 +339,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".cardSwiper", {
+      const swiper = new Swiper(".cardSwiper" ,{
         effect: "cards",
         grabCursor: true,
         loop: true,
@@ -344,6 +357,14 @@
         },
       });
     </script>
+
+    <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hide");
+  });
+</script>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
