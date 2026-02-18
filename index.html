@@ -36,7 +36,10 @@
       href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap"
       rel="stylesheet"
     />
-
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
     <!-- Bootstrap CSS for footer -->
@@ -59,63 +62,53 @@
   </div>
 </div>
 
-    <nav
-      class="navbar navbar-expand-lg fixed-top navbar-light"
-      style="background-color: white"
+<nav class="navbar navbar-expand-lg fixed-top navbar-light custom-navbar">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img
+        src="img/logo_bg.png"
+        alt="Intecil Logo"
+        class="brand-logo"
+      />
+      <span class="brand-text">PRODUCTS LIMITED</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
     >
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a
-          class="navbar-brand ps-3 d-flex align-items-center"
-          href="index.html"
-        >
-          <img
-            src="img/logo_bg.png"
-            alt="Logo"
-            width="70"
-            height="50"
-            class="me-2"
-          />
-          <span class="brand-text">PRODUCTS LIMITED</span>
-        </a>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Mobile Toggle Button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0">
 
-        <!-- Navbar Links -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="mainNavbar"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="product.html">Our Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Our Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <!-- Carousel -->
     <div
@@ -398,6 +391,24 @@
         </div>
       </div>
     </footer>
+    <!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+
+  <!-- Call Button -->
+  <a href="tel:+2349152352104" class="call-float">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a
+    href="https://wa.me/2349152352104?text=Hello%20I'd%20Like,%20to%20make%20enquires."
+    class="whatsapp-float"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</div>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({

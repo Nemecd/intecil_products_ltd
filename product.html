@@ -32,6 +32,10 @@
       href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
@@ -52,37 +56,25 @@
         <div class="preloader-spinner"></div>
       </div>
     </div>
-    <nav
-      class="navbar navbar-expand-lg fixed-top navbar-light"
-      style="background-color: white"
-    >
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light custom-navbar">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="navbar-brand ps-3 d-flex align-items-center" href="#">
-          <img
-            src="img/logo_bg.png"
-            alt="Logo"
-            width="70"
-            height="50"
-            class="me-2"
-          />
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="img/logo_bg.png" alt="Intecil Logo" class="brand-logo" />
           <span class="brand-text">PRODUCTS LIMITED</span>
         </a>
 
-        <!-- Mobile Toggle Button -->
+        <!-- Mobile Toggle -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar Links -->
+        <!-- Links -->
         <div
           class="collapse navbar-collapse justify-content-end"
           id="mainNavbar"
@@ -91,14 +83,15 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="product.html"
-                >Our Products</a
-              >
+              <a class="nav-link active" href="product.html">Our Products</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
@@ -117,13 +110,13 @@
           <!-- TEXT SIDE -->
           <div class="col-lg-6 product-text" data-aos="fade-right">
             <h2 class="product-title">
-              <span class="title-box">Personal</span>
-              Care & Hygiene
+              <span class="title-box">Bar</span>
+              Soaps
             </h2>
 
             <p class="product-desc">
-              Designed to take care of your body. It protects you from exposing
-              to germs while keeping your skin healthy and fresh.
+              Expertly manufactured with refined materials and precision
+              processes to deliver dependable cleansing quality.
             </p>
 
             <a href="#" class="btn product-btn"> VIEW PRODUCTS </a>
@@ -147,14 +140,14 @@
           <!-- TEXT SIDE -->
           <div class="col-lg-6 product-text" data-aos="fade-left">
             <h2 class="product-title">
-              <span class="title-box-red">Home</span>
-              Care Essentials
+              <span class="title-box-red">Multipurpose</span>
+              Products
             </h2>
 
             <p class="product-desc">
-              Our home care range is specially formulated to keep your
-              environment clean, safe, and fresh while maintaining eco-friendly
-              standards.
+              A dual-purpose formulation engineered for personal hygiene and
+              laundry use, processed under strict quality standards for
+              consistent cleansing efficiency.
             </p>
 
             <a href="#" class="btn product-btn-alt"> VIEW PRODUCTS </a>
@@ -178,13 +171,14 @@
           <!-- TEXT SIDE -->
           <div class="col-lg-6 product-text" data-aos="fade-right">
             <h2 class="product-title">
-              <span class="title-box">Personal</span>
-              Care & Hygiene
+              <span class="title-box">Bathing</span>
+              Essentials
             </h2>
 
             <p class="product-desc">
-              Designed to take care of your body. It protects you from exposing
-              to germs while keeping your skin healthy and fresh.
+              Premium beauty soap developed with carefully balanced cleansing
+              compounds to provide gentle, refreshing body care through a
+              quality-controlled production process.
             </p>
 
             <a href="#" class="btn product-btn"> VIEW PRODUCTS </a>
@@ -208,14 +202,14 @@
           <!-- TEXT SIDE -->
           <div class="col-lg-6 product-text" data-aos="fade-left">
             <h2 class="product-title">
-              <span class="title-box-red">Home</span>
-              Care Essentials
+              <span class="title-box-red">Hand</span>
+              Hygiene
             </h2>
 
             <p class="product-desc">
-              Our home care range is specially formulated to keep your
-              environment clean, safe, and fresh while maintaining eco-friendly
-              standards.
+              Professionally produced liquid handwash formulated with effective
+              cleansing agents to support daily hand hygiene, manufactured under
+              strict quality standards for safe and reliable use.
             </p>
 
             <a href="#" class="btn product-btn-alt"> VIEW PRODUCTS </a>
@@ -239,13 +233,14 @@
           <!-- TEXT SIDE -->
           <div class="col-lg-6 product-text" data-aos="fade-right">
             <h2 class="product-title">
-              <span class="title-box">Personal</span>
+              <span class="title-box">Skin</span>
               Care & Hygiene
             </h2>
 
             <p class="product-desc">
-              Designed to take care of your body. It protects you from exposing
-              to germs while keeping your skin healthy and fresh.
+              High-purity petroleum jelly carefully refined to support skin
+              moisture preservation and protective care through a controlled
+              manufacturing process.
             </p>
 
             <a href="#" class="btn product-btn"> VIEW PRODUCTS </a>
@@ -331,6 +326,22 @@
         </div>
       </div>
     </footer>
+    <!-- FLOATING CONTACT BUTTONS -->
+    <div class="floating-contact">
+      <a href="tel:+2349152352104" class="call-float">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+
+      <!-- WhatsApp Button -->
+      <a
+        href="https://wa.me/2349152352104?text=Hello%20I'd%20Like,%20to%20make%20enquires."
+        class="whatsapp-float"
+        target="_blank"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({

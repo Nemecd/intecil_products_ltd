@@ -67,27 +67,45 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Nav links */
-.navbar-nav .nav-link {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  color: #000 !important;
+/* NAVBAR BACKGROUND */
+.custom-navbar {
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  z-index: 999;
 }
 
-/* Active link */
-.navbar-nav .nav-link.active {
-  color: #CF0F0F !important;
+/* LOGO */
+.brand-logo {
+  width: 65px;
+  height: auto;
+  margin-right: 10px;
 }
-/* Base nav link */
+
+/* BRAND TEXT */
+.brand-text {
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+
+/* NAV LINKS */
 .navbar-nav .nav-link {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #000 !important;
+  margin-left: 20px;
   padding-bottom: 6px;
 }
 
-/* Red outline effect */
+/* ACTIVE LINK */
+.navbar-nav .nav-link.active {
+  color: #CF0F0F !important;
+}
+
+/* RED UNDERLINE ANIMATION */
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
@@ -95,19 +113,14 @@ body {
   bottom: 0;
   width: 0;
   height: 2px;
-  border-bottom: 2px solid #CF0F0F;
+  background: #CF0F0F;
   transition: width 0.3s ease;
 }
 
-/* On hover */
-.navbar-nav .nav-link:hover::after {
-  width: 100%;
-}
-
-/* Keep active highlighted
+.navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
   width: 100%;
-} */
+}
 
 /* Mobile spacing */
 @media (max-width: 991px) {
@@ -120,21 +133,34 @@ body {
   }
 }
 /* Make images responsive & consistent height */
-.carousel-img {
+/* .carousel-img {
   height: 100vh;
   object-fit: cover;
   object-position: center top;
 }
 
 
-/* Caption styling */
+
 .carousel-caption {
   bottom: 20%;
   font-family: 'Montserrat', sans-serif;
+} */
+.carousel-img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+  }
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .carousel-img {
     height: 60vh;
   }
@@ -150,7 +176,7 @@ body {
   .carousel-caption p {
     font-size: 0.9rem;
   }
-}
+} */
 /* Title (col-12) */
 .about-title {
   font-family: 'Montserrat', sans-serif;
@@ -232,18 +258,34 @@ body {
     height: 320px;
   }
 }
-
-.about-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;     
-}
+/* About */
 .about-image-wrapper {
   position: relative;
   overflow: hidden;
+  width: 100%;
   height: 650px;
 }
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive heights */
+@media (max-width: 992px) {
+  .about-image-wrapper { height: 450px; }
+}
+
+@media (max-width: 768px) {
+  .about-image-wrapper { height: 320px; }
+}
+
+@media (max-width: 480px) {
+  .about-image-wrapper { height: 260px; }
+}
+
 
 /* dark overlay */
 .about-image-wrapper::after {
@@ -284,12 +326,27 @@ body {
 }
 
 /* Mobile adjustment */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-image-text {
-    font-size: 2.2rem;
-    left: 4%;
+    font-size: 2rem;
   }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-image-text {
+    font-size: 1.4rem;
+    left: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .about-image-text {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* ABOUT PAGE */
 .about-heading {
@@ -741,17 +798,15 @@ body {
 /* Our Products Section */
 /* SECTION BACKGROUND */
 .product-highlight {
-  background: linear-gradient(
-    135deg,
-    #CF0F0F 0%,
-    #f44336 35%,
-    #ffffff 100%
-  );
+  background-color:#ffffff;
   border-radius: 20px;
   margin: 60px 20px;
   padding: 60px 40px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+  transition: 0.3s ease;
 }
 .product-highlight::before {
   content: "";
@@ -776,7 +831,7 @@ body {
 
 /* BLUE BOX AROUND "PERSONAL" */
 .title-box {
-  background: #1e3a8a;
+  background: #CF0F0F;
   color: #fff;
   padding: 6px 14px;
   border-radius: 6px;
@@ -913,6 +968,69 @@ body {
     rgba(255,255,255,0.9),
     transparent
   );
+}
+/* Whatsapp */
+/* FLOATING CONTAINER */
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+/* COMMON BUTTON STYLE */
+.floating-contact a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  transition: 0.3s ease;
+}
+
+/* CALL BUTTON */
+.call-float {
+  background: #CF0F0F; /* Your brand red */
+}
+
+.call-float:hover {
+  background: #a50c0c;
+  transform: scale(1.1);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-float {
+  background: #25D366;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: scale(1.1);
+}
+
+@keyframes floatBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-contact a {
+  animation: floatBounce 1.8s infinite;
+}
+
+@media (max-width: 768px) {
+  .floating-contact a {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 }
 
 
