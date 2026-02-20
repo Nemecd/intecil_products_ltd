@@ -1,6 +1,10 @@
 /*  {
   outline: 1px solid red;
 } */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -76,11 +80,11 @@ body {
 }
 
 /* LOGO */
-.brand-logo {
+/* .brand-logo {
   width: 65px;
   height: auto;
   margin-right: 10px;
-}
+} */
 
 /* BRAND TEXT */
 .brand-text {
@@ -89,6 +93,22 @@ body {
   font-size: 18px;
   color: #000;
 }
+.brand-logo {
+  height: 40px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .brand-text {
+    font-size: 12px;
+  }
+}
+
 
 /* NAV LINKS */
 .navbar-nav .nav-link {
